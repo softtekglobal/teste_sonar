@@ -62,7 +62,7 @@ public class TesteRepository {
 			}
 		}
 		
-		sql.append(" ORDER BY 3 DESC");
+		sql.append(" ORDER BY 2 DESC");
 		
 		
 		
