@@ -85,7 +85,7 @@ public class TesteRepository {
 		  // which is equivalent to:
 		  // SELECT * FROM users
 
-		  java.sql.Statement statement = connection.createStatement();
+		  java.sql.Statement statement = connection.prepareStatement(query);
 		  java.sql.ResultSet resultSet = statement.executeQuery(query); // Noncompliant
 		  return resultSet.next();
 		}
