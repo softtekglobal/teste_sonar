@@ -1,5 +1,7 @@
 package com.softtek.testesonar.demo;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -85,8 +87,8 @@ public class TesteRepository {
 		  // which is equivalent to:
 		  // SELECT * FROM users
 
-		  java.sql.Statement statement = connection.createStatement();
-		  java.sql.ResultSet resultSet = statement.executeQuery(query); // Noncompliant
+		  PreparedStatement  preparedStatement  = connection.prepareStatement(query);
+		  java.sql.ResultSet resultSet = preparedStatement.executeQuery();
 		  return resultSet.next();
 		}
 	
